@@ -1,0 +1,45 @@
+
+2021.02.28 DIT WAS WELKE FUNCTIES GEMAAKT MOESTEN WORDEN VOLGENS PDF EN WAT IK AL HEB.
+34 functies moeten worden geprogrammeerd (exclusief de bonus)
+
+Programmed
+
+made - memset
+made - bzero
+made - memcpy
+made - memccpy
+made - memmove
+made - memchr
+made - memcmp
+made - strlen
+made - strlcpy
+made - strlcat
+made - strchr
+
+made - strrchr
+made - strnstr
+made - strncmp
+made - atoi
+made - isalpha
+made - isdigit
+made - isalnum
+made - isascii
+made - isprint
+made - toupper
+made - tolower
+
+made - calloc
+made - strdup
+
+made - ft_substr
+---------------ft_strjoin <- ONTBREEKT
+---------------ft_strtrim <- ONTBREEKT
+
+---------------ft_split <- zit er al in MAAR MOET NOG WORDEN BEGREPEN
+---------------ft_itoa <- ONTBREEKT
+made - ft_strmapi
+
+made - ft_putchar_fd
+made - ft_putstr_fd
+made - ft_putendl_fd
+made - ft_putnbr_fd
