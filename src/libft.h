@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/24 20:05:03 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/08/28 18:26:37 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/08/28 15:31:33 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 #include <fcntl.h>		// open
 #include <string.h>		// for memset?
 
-
-// Part 1: Section: No need external functions
+// Part 1
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -38,21 +37,8 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
-int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strlcpy(char *dst, const char *src, size_t size);
 char	*ft_strnstr(const char *big, const char *small, size_t len);
-int		ft_atoi(char *str);
-
-// Part 1: Section: Needs malloc()
-
-void	*calloc(size_t nmemb, size_t size);
-char	*strdup(const char *s);
-
-
-
-
-
-
 
 // Part ???
 

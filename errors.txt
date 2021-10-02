@@ -1,0 +1,19 @@
+If you get the following error:
+
+VVVVVVVVVVVVVVVVVVVV
+src/tempCodeRunnerFile.c:1:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ at end of input
+    1 | dst
+      | ^~~
+^^^^^^^^^^^^^^^^^^^^
+
+Solution:
+Remove the tempCodeRunnerFile.c from the src folder.
+
+Reason:
+It is because in your src folder there is a file called 'tempCodeRunnerFile.c'
+that shouldn't be there. It is probably made by VSCODE during debugging.
+However, when you try to compile your library using your Makefile, it also
+tries to compile this undesired temCodeRunnerFile.c with it. This is because
+the Makefile is made such that it will detect ALL the .c files in the src folder.
+
+

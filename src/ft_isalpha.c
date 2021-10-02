@@ -6,20 +6,17 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/08/25 23:16:07 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/08/25 23:39:51 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/08/26 17:59:25 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 	{
 		return (1);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }

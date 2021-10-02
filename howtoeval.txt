@@ -1,0 +1,5 @@
+All my .c files have a test main inside them. However, to run it you need not
+only to uncomment the main function, you also need to make it easy for the .c
+file to find the header file. This is because you circumvent the Makefile, 
+in which I explicitly tell the compiler where the header file is located. To run
+the test main functions, simply relocate the libft.h into the src directory.
