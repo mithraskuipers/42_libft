@@ -4,7 +4,7 @@ VVVVVVVVVVVVVVVVVVVV
 src/tempCodeRunnerFile.c:1:1: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ at end of input
     1 | dst
       | ^~~
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^ 
 
 Solution:
 Remove the tempCodeRunnerFile.c from the src folder.
