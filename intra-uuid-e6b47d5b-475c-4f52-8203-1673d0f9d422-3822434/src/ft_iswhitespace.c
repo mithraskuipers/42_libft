@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strrchr.c                                       :+:    :+:            */
+/*   ft_iswhitespace.c                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/10/07 17:21:40 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/09 19:07:04 by mikuiper      ########   odam.nl         */
+/*   Created: 2021/10/09 19:08:57 by mikuiper      #+#    #+#                 */
+/*   Updated: 2021/10/09 19:08:57 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strrchr(const char *s, int c)
+int		ft_iswhitespace(char c)
 {
-	size_t 	len;
-	char	*s_uchar;
-	
-	len = ft_strlen((char *)s);
-	s_uchar = (char *)s;
-	while (len != '\0' && s_uchar[len] != (char)c)
+	if (c == ' ' || c == '\t' || c == '\v' || c == '\r' || c == '\n' || 
+	c == '\f')
 	{
-		len--;
+		return (1);
 	}
-	if (s_uchar[len] == (char)c) // in case the character is a null terminator.
-	{
-		return (&s_uchar[len]);
-	}
-	return (NULL);
+	return (0);
 }
