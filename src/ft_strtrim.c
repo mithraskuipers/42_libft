@@ -6,7 +6,7 @@
 /*   By: mkuipers <mkuipers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/10 12:05:03 by mkuipers      #+#    #+#                 */
-/*   Updated: 2021/10/11 13:17:27 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/11 20:55:41 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char    *ft_strtrim(char const *s1, char const *set)
     {
         i++;
     }
-    if (i == j)
+    if (!(j > i))
     {
         return (ft_strdup(""));
     }
