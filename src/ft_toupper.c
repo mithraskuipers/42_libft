@@ -5,10 +5,12 @@
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/08/26 17:04:21 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/08/26 17:09:29 by mikuiper      ########   odam.nl         */
+/*   Created: 2021/10/07 16:35:14 by mikuiper      #+#    #+#                 */
+/*   Updated: 2021/10/07 16:56:14 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

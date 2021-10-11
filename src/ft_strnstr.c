@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strnstr.c                                       :+:    :+:            */
+/*   strnstr.c                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/09 17:11:07 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/09 17:11:09 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/09 17:12:04 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include "ft_strlen.c"
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -37,12 +36,3 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-/*
-void main()
-{
-	char needle[] = "Lydianne 8";
-	char haystack[] = "LyLypLydianne 8";
-	ft_strnstr(haystack, needle, 100);
-}
-*/

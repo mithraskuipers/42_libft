@@ -28,3 +28,7 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
+
+# -c: Do not run the linker.
+# -I: Include directory of header files.
+# $(subst from,to,text): Performs a textual replacement on the text text: each occurrence of from is replaced by to.

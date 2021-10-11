@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/08/26 17:31:51 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/08/26 17:58:03 by mikuiper      ########   odam.nl         */
+/*   Created: 2021/10/07 16:52:06 by mikuiper      #+#    #+#                 */
+/*   Updated: 2021/10/07 17:19:45 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,24 @@
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
-
+	char	*s_uchar;
+	
 	i = 0;
-	if (c == '\0')
+	s_uchar = (char *)s;
+	while (s_uchar[i])
 	{
-		return ((char *)(&(s[ft_strlen(s)])));
-	}
-
-	while (s[i])
-	{
-		if (s[i] == c)
+		if (s_uchar[i] == (char)c)
 		{
-			return((char *)&s[i]);
+			return (&s_uchar[i]);
 		}
 		i++;
 	}
+	if (s_uchar[i] == (char)c) // in case the character is a null terminator.
+	{
+		return (&s_uchar[i]);
+	}
 	return (NULL);
 }
+
+//The strchr() function locates the first occurrence of c (converted to a char) in the string pointed to by s.
+//The terminating null character is considered to be part of the string; therefore if c is `\0', the functions locate the terminating `\0'.

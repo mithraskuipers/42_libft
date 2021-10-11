@@ -5,55 +5,48 @@
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/08/24 20:05:03 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/08/28 18:26:37 by mikuiper      ########   odam.nl         */
+/*   Created: 2021/10/05 12:16:23 by mikuiper      #+#    #+#                 */
+/*   Updated: 2021/10/11 07:13:26 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>		// printf
-#include <stdlib.h>		// malloc
-#include <unistd.h>		// read/write
-#include <stddef.h>		// for size_t
-#include <fcntl.h>		// open
-#include <string.h>		// for memset?
+// Includes
 
+#include <stdio.h>	// printf
+#include <stdlib.h>	// malloc
+#include <unistd.h>	// read/write
+#include <stddef.h>	// size_t
+#include <fcntl.h>	// open
+#include <string.h>	// ???
 
-// Part 1: Section: No need external functions
-
-int		ft_isalpha(int c);
+// Prototypes
+// Part 1
 int		ft_isdigit(int c);
+int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-size_t	ft_strlen(const char *s);
-void	*ft_memset(void *s, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	*ft_memmove(void *dest, const void *src, size_t n);
-int		ft_strlcpy(char *dst, const char *src, size_t size);
-size_t	ft_strlcat(char *dst, const char *src, size_t size); //difficult
+size_t 	ft_strlen(const char *s);
+void 	*ft_memset(void *b, int c, size_t len);
+void 	ft_bzero(void *s, size_t n);
+void 	*ft_calloc(size_t count, size_t size);
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len);
+size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-void	*ft_memchr(const void *s, int c, size_t n);
+void 	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-int		ft_strlcpy(char *dst, const char *src, size_t size);
-char	*ft_strnstr(const char *big, const char *small, size_t len);
-int		ft_atoi(char *str);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+int		ft_atoi(const char *str);
+int		ft_iswhitespace(char c);
+char	*ft_strdup(const char *s1);
 
-// Part 1: Section: Needs malloc()
-
-void	*calloc(size_t nmemb, size_t size);
-char	*strdup(const char *s);
-
-
-
-
-
-
-
-// Part ???
-
-char *ft_strdup(const char *s);
+// Part 2
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);

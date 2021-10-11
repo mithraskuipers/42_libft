@@ -5,48 +5,30 @@
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/08/26 00:50:28 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/08/28 11:44:52 by mikuiper      ########   odam.nl         */
+/*   Created: 2021/10/06 14:38:25 by mikuiper      #+#    #+#                 */
+/*   Updated: 2021/10/06 14:51:27 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// Werkt, warmachine passed
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	size_t			i;
-	unsigned char	*dest_uchar;
+	unsigned char	*dst_uchar;
 	unsigned char	*src_uchar;
+	size_t			i;
 
-	i = 0;
-	dest_uchar = (unsigned char *)dest;
+	dst_uchar = (unsigned char *)dst;
 	src_uchar = (unsigned char *)src;
+	i = 0;
+
 	while (i < n)
 	{
-		dest_uchar[i] = src_uchar[i];
+		dst_uchar[i] = src_uchar[i];
 		i++;
 	}
-	return (dest);
+	return(dst);
 }
 
-/*
-void main()
-{
-	char test1[] = "aaaaaaaaa";
-	char test2[] = "zzzzzzzzz";
-	ft_memcpy(test2, test1, 5);	
-
-	printf("%s", test2);
-}
-*/
-
-
-/*
-DESCRIPTION
-The memcpy() function copies n bytes from memory area src to memory area dest.  The memory areas must not overlap. 
-Use memmove(3) if the memory areas do overlap.
-
-RETURN VALUE
-The memcpy() function returns a pointer to dest.
-*/
+// The memcpy() function copies n bytes from memory area src to memory area dst.
+// If dst and src overlap, behavior is undefined.  Applications in which dst and 
+// src might overlap should use memmove(3) instead.

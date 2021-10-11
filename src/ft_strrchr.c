@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/08/26 17:31:51 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/08/26 23:19:44 by mikuiper      ########   odam.nl         */
+/*   Created: 2021/10/07 17:21:40 by mikuiper      #+#    #+#                 */
+/*   Updated: 2021/10/09 19:07:04 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
-
-	i = ft_strlen(s);
-		while (i >= 0)
+	size_t 	len;
+	char	*s_uchar;
+	
+	len = ft_strlen((char *)s);
+	s_uchar = (char *)s;
+	while (len != '\0' && s_uchar[len] != (char)c)
 	{
-		if (s[i] == (char)c)
-		{
-			return((char *)&s[i]);
-		}
-		i = i - 1;
+		len--;
+	}
+	if (s_uchar[len] == (char)c) // in case the character is a null terminator.
+	{
+		return (&s_uchar[len]);
 	}
 	return (NULL);
 }
-
-/*
-Notities: 
-Do not remove!
-size_t returned aan unsigned integer. Schijnbaar is dat PER DEFINITIE groter dan
-0. Als je dit gebruikt, kun je dus niet hier de expressie while (i >= 0) doen,
-want die is per definitie waar. Om deze reden is mijn i een int, en geen size_t.
-*/

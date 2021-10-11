@@ -5,39 +5,32 @@
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/08/25 23:57:06 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/08/26 09:44:44 by mikuiper      ########   odam.nl         */
+/*   Created: 2021/10/05 19:52:37 by mikuiper      #+#    #+#                 */
+/*   Updated: 2021/10/06 11:07:48 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-The memset() function fills the first n bytes of the memory area pointed to by s with the constant byte c.
-*/
-
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t			i;
-	unsigned char	*s_uchar;
-	
+	size_t		i;
 	i = 0;
-	s_uchar = (unsigned char *)s;
-	while (i < n)
+
+	unsigned char *b_uchar;
+	b_uchar = (unsigned char *)b;
+	while (i < len)
 	{
-		s_uchar[i] = c;
+		b_uchar[i] = (unsigned char)c;
 		i++;
 	}
-	return (s);
+	return (b);
 }
 
 /*
-Je moet de void pointer s eerst typecasten naar een unsigned char pointer.
-Deze unsigned char pointer kun je vervolgens wijzigen.
-*/
-
-/*
-void main()
+#include <stddef.h>
+#include <stdio.h>
+int 	main()
 {
 	char test[] = "Goedemorgen!";
 	ft_memset(test, 'a', 5);

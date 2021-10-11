@@ -5,21 +5,28 @@
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/08/26 00:38:37 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/08/26 17:59:37 by mikuiper      ########   odam.nl         */
+/*   Created: 2021/10/06 11:51:14 by mikuiper      #+#    #+#                 */
+/*   Updated: 2021/10/06 11:59:43 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+//      The bzero() function writes n zeroed bytes to the string s.  If n is zero, bzero() does nothing.
+
+//#include <stddef.h>
+//#include <stdio.h>
+
 #include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
+void 	ft_bzero(void *s, size_t n)
 {
-	size_t			i;
 	unsigned char	*s_uchar;
-
-	i = 0;
+	size_t 			i;
 	s_uchar = (unsigned char *)s;
-	while (i < n)
+	i = 0;
+	if (n == 0)
+	{
+		return;
+	}
+	while (i <  n)
 	{
 		s_uchar[i] = '\0';
 		i++;
@@ -27,5 +34,10 @@ void	ft_bzero(void *s, size_t n)
 }
 
 /*
-The bzero() function erases the data in the n bytes of the memory starting at the location pointed to by s, by writing zeros (bytes containing '\0') to that area.
+int 	main()
+{
+	char test[] = "Goedemorgen!";
+	ft_bzero(test, 2);
+	printf("%s", test);
+}
 */

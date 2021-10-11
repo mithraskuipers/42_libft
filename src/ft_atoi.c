@@ -5,59 +5,53 @@
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/08/28 17:13:59 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/08/30 16:38:14 by mikuiper      ########   odam.nl         */
+/*   Created: 2021/10/09 17:13:29 by mikuiper      #+#    #+#                 */
+/*   Updated: 2021/10/11 11:22:07 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-
-int	ft_isdigit(int c)
+int		ft_atoi(const char *str)
 {
-	if (c >= '0' && c <= '9')
-	{
-		return (1);
-	}
-	return (0);
-}
-
-int	ft_iswhitespace(int c)
-{
-	if (c == ' ' || c == '\t' || c == '\v' || c == '\r' || c == '\n' || c == '\f')
-	{
-		return (1);
-	}
-	return (0);
-}
-
-int	ft_atoi(char *s)
-{
-	int	neg;
-	int	nbr;
-	int	i;
-
-	neg = 1;
-	nbr = 0;
+	size_t	i;
+	int		sign;
+	int		nbr;
+	
 	i = 0;
+	sign = 1;
+	nbr = 0;
 
-	while (ft_iswhitespace(s[i]))
+	if (!(str))
+	{
+		return (0);
+	}
+	
+	while (ft_iswhitespace(str[i]))
 	{
 		i++;
 	}
-	if (s[i] == '-')
+	if (str[i] == '-' || str[i] == '+') // dit blok was wat steeds fout ging. Eerst was het enkel check of min, en dan sign = -1. Nested if was vereist.
 	{
-		neg = -1;
-	}
-	while (s[i] == '-' || s[i] == '+')
-	{
+		if (str[i] == '-')
+		{
+			sign = -1;
+		}
 		i++;
 	}
-	while (s[i] != '\0' && ft_isdigit(s[i]))
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		nbr = nbr * 10;
-		nbr = nbr + (s[i] - '0');
+		nbr = ((nbr * 10) + str[i] - '0');
 		i++;
 	}
-	return (nbr * neg);
+	return (nbr * sign);
 }
+
+/*
+int	main()
+{
+	char s[] = "-123";
+	printf("%d", ft_atoi(s));
+	return (0);
+}
+*/

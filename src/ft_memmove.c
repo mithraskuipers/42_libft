@@ -5,84 +5,95 @@
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/08/26 00:57:37 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/08/26 10:01:31 by mikuiper      ########   odam.nl         */
+/*   Created: 2021/10/06 16:03:41 by mikuiper      #+#    #+#                 */
+/*   Updated: 2021/10/06 19:25:12 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t			i;
-	unsigned char	*dest_uchar;
-	unsigned char	*src_uchar;
-	unsigned char	*buff_uchar;
-
-	dest_uchar = (unsigned char *)dest;
-	src_uchar = (unsigned char *)src;
-
-	i = 0;
-	if(!(buff_uchar = (unsigned char *)malloc(n * sizeof(unsigned char))))
-	{
-		return (NULL);
-	}
-	while (i < n)
-	{
-		buff_uchar[i] = src_uchar[i];
-		i++;
-	}
-	ft_memcpy(dest_uchar, buff_uchar, n);
-	free(buff_uchar);
-	return (dest);
+	void	*tmp;
+	tmp = malloc(len);
+	ft_memcpy(tmp, src, len);
+	ft_bzero(dst, len);
+	ft_memcpy(dst, tmp, len);
+	free(tmp);
+	return (dst);
 }
 
 /*
-memmove is simpelweg een veiligere memcpy.
-Schijnbaar kunnen er problemen ontstaan als er memory overlap is
+#include "../include/libft.h"
+#include <stdio.h>
+#include <string.h>
 
-Overlap:
-Dit is een voorbeeld zin
-[--------] dest
-    [-----] source
+size_t 	ft_strlen(const char *s)
+{
+	size_t 	i;
+	i = 0;
+	while (s[i])
+	{
+		i++;
+	}
+	return (i);
+}
 
-Geen overlap:
-Dit is een voorbeeld zin
-[--------] dest
-             [-----] source
+void 	ft_bzero(void *s, size_t n)
+{
+	unsigned char	*s_uchar;
+	size_t 			i;
+	s_uchar = (unsigned char *)s;
+	i = 0;
+	if (n == 0)
+	{
+		return;
+	}
+	while (i <  n)
+	{
+		s_uchar[i] = '\0';
+		i++;
+	}
+}
 
-Je voorkomt dat er een directe overlap is tussen DEST en SRC,
-door een 3e stuk memory (ook wel bekend als buffer) te introduceren. 
-Je plaatst wat je wil van SRC in dit 3e stuk. Daarna zet je over wat zit
-in dit 3e stuk in DEST. Het klinkt vreemd, maar zo voorkom je wel dat er tussen
-SRC en DEST een overlap is. Voor de overzettingen kun je gewoon memcpy gebruiken.
-*/
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+{
+	unsigned char	*dst_uchar;
+	unsigned char	*src_uchar;
+	size_t			i;
 
+	dst_uchar = (unsigned char *)dst;
+	src_uchar = (unsigned char *)src;
+	i = 0;
 
-/*
+	while (i < n)
+	{
+		dst_uchar[i] = src_uchar[i];
+		i++;
+	}
+	return(dst);
+}
 
 int main()
 {
-	char str[50] = "aaa bbb ccc";
+    char str1[] = "Roltrappenland";
+    char str2[] = "Quiz";
+	char str3[] = "Roltrappenland";
+    char str4[] = "Quiz";
+ 
+    puts("str1 before memmove ");
+    puts(str1);
+    ft_memmove(str1, str2, 5);
+    puts("\nstr1 after memmove ");
+    puts(str1);
 
-	memmove(str, str + 4, 7);
-	printf("%s", str);
-	return(0);
-	
+
+	puts("str3 before memmove ");
+    puts(str3);
+    memmove(str3, str4, 5);
+    puts("\nstr3 after memmove ");
+    puts(str3);
+ 
+    return 0;
 }
-*/
-
-
-
-/*
-DESCRIPTION 
-
-The memmove() function copies n bytes from memory area src to memory area dest.
-The memory areas may overlap: copying takes place as though the bytes in src are
-first copied into a tempo‐ rary array that does not overlap src or dest, and the
-bytes are then copied from the temporary array to dest.
-
-RETURN VALUE
-
-The memmove() function returns a pointer to dest.
 */
