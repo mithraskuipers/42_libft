@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/06 11:51:14 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/06 11:59:43 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/12 17:48:56 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ void 	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+
+
+// void 	ft_bzero(void *s, size_t n)
+// {
+// 	ft_memset(s, 0, n);
+// }
 
 /*
 int 	main()

@@ -1,6 +1,6 @@
 NAME = libft.a
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -c -I
+CFLAGS = -c -I
 
 SRC_DIR = ./src
 OBJ_DIR = ./obj
@@ -17,7 +17,7 @@ $(NAME): $(OBJS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	mkdir -p obj
-	$(CC) $(CFLAGS) $(INC_DIR) -o $@ $<
+	$(CC) -g $(CFLAGS) $(INC_DIR) -o $@ $<
 
 all: $(NAME)
 
