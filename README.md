@@ -4,7 +4,7 @@
 
 # Index
 
-*  [What is Libft?](#What-is-Libft?)
+*  [What is Libft?](#What-is-Libft)
 *  [Functions](#Functions)
 * * [Standard functions](#Standard-functions)
 * * [Non-standard functions](#Non-standard-functions)
@@ -12,7 +12,7 @@
 *  [Technologies](#Technologies)
 *  [How to Run](#How-to-Run)
 
-# What is Libft?
+# What is Libft
 
 C programming can be very time time-consuming without access to standard C library functions. The Libft project required me to re-write a set of these functions, including additional famous functions for which there is no consistent definition. While 42 acknowledges that reinventing the wheel is bad, Libft is meant to teach us a deeper understanding of various data structures, algorithms, memory efficiency, and problem solving.
 
