@@ -2,7 +2,7 @@ NAME 		= libft.a
 CFLAGS 		= -Wall -Werror -Wextra
 
 DIR_SRC 	= ./srcs/
-DIR_BONUS	= ./srcs_bonus/
+DIR_BONUS	= ./bonus/
 DIR_OBJ		= ./obj/
 
 DIR_INC		= ./inc/
