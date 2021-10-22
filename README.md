@@ -4,7 +4,7 @@
 
 # Index
 
-*  [What is Libft?](#What-is-Libft)
+*  [What is Libft](#What-is-Libft)
 *  [Functions](#Functions)
 * * [Standard functions](#Standard-functions)
 * * [Non-standard functions](#Non-standard-functions)
