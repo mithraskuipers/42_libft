@@ -6,12 +6,12 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/09 10:29:20 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/20 19:20:36 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:51:19 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 ///*
-#include "libft.h"
+#include "../inc/libft.h"
 //#include "ft_strlen.c"
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {

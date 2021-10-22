@@ -6,11 +6,11 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/06 11:51:14 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/15 18:16:00 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:50:09 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 void 	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*s_uchar;

@@ -6,11 +6,11 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/05 18:45:22 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/05 19:56:32 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:50:18 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int		ft_isascii(int c)
 {

@@ -6,12 +6,12 @@
 /*   By: mkuipers <mkuipers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/17 19:25:50 by mkuipers      #+#    #+#                 */
-/*   Updated: 2021/10/17 22:57:24 by mkuipers      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:51:58 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int	ft_lstsize(t_list *lst)
 {

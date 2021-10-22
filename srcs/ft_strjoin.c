@@ -6,11 +6,11 @@
 /*   By: mkuipers <mkuipers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/10 10:01:53 by mkuipers      #+#    #+#                 */
-/*   Updated: 2021/10/20 19:19:22 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:51:06 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 char    *ft_strjoin(char const *s1, char const *s2)
 {

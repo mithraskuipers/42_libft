@@ -6,11 +6,11 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/07 17:21:40 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/09 19:07:04 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:51:24 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

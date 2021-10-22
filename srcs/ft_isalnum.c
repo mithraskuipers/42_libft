@@ -6,11 +6,11 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/05 18:03:18 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/14 14:19:07 by mkuipers      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:50:14 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int		ft_isalnum(int c)
 {

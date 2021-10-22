@@ -6,11 +6,11 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/09 15:11:46 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/09 16:25:48 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:50:30 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/16 15:15:18 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/16 23:20:00 by mkuipers      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:51:16 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 char        *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -6,11 +6,11 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/06 16:03:41 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/16 12:41:47 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:50:35 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

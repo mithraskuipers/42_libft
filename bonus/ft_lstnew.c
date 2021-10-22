@@ -6,11 +6,11 @@
 /*   By: mkuipers <mkuipers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/17 17:14:42 by mkuipers      #+#    #+#                 */
-/*   Updated: 2021/10/17 22:47:00 by mkuipers      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:51:56 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

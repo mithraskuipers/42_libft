@@ -6,11 +6,11 @@
 /*   By: mkuipers <mkuipers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/10 12:05:03 by mkuipers      #+#    #+#                 */
-/*   Updated: 2021/10/15 23:31:01 by mkuipers      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:51:27 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 int     ft_isinset(char c, char const *set)
 {

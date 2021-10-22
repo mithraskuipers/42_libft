@@ -6,12 +6,12 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/09 14:53:34 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/09 15:10:45 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:50:28 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 void 	*ft_memchr(const void *s, int c, size_t n)
 {

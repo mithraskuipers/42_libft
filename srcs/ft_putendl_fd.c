@@ -6,11 +6,11 @@
 /*   By: mkuipers <mkuipers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/17 09:24:08 by mkuipers      #+#    #+#                 */
-/*   Updated: 2021/10/17 10:26:19 by mkuipers      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:50:45 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 void		ft_putendl_fd(char *s, int fd)
 {

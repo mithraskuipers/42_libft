@@ -6,11 +6,11 @@
 /*   By: mkuipers <mkuipers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/17 23:56:43 by mkuipers      #+#    #+#                 */
-/*   Updated: 2021/10/18 01:24:10 by mkuipers      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:51:49 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {

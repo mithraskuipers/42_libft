@@ -10,3 +10,4 @@
 
 - ft_atoi.c het is niet erg als er geen long wordt gebruikt. Bij 1 van de libft testers gaf die gele output bij ft_split. Geen probleem dus.
 
+- https://github.com/Tripouille/libftTester

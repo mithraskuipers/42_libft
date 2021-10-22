@@ -6,11 +6,11 @@
 /*   By: mkuipers <mkuipers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/17 19:22:53 by mkuipers      #+#    #+#                 */
-/*   Updated: 2021/10/17 22:59:29 by mkuipers      ########   odam.nl         */
+/*   Updated: 2021/10/23 00:51:46 by mkuipers      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../inc/libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
