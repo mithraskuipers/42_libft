@@ -17,6 +17,7 @@
 C programming can be very time time-consuming without access to standard C library functions. The Libft project required me to re-write a set of these functions, including additional famous functions for which there is no consistent definition. While 42 acknowledges that reinventing the wheel is bad, Libft is meant to teach us a deeper understanding of various data structures, algorithms, memory efficiency, and problem solving.
 
 # Functions
+
 ## Standard functions
 
 -  [x]  [`ft_isalpha`](srcs/ft_isalpha.c)
