@@ -1,0 +1,12 @@
+- Rename bonus functions to end with _bonus (conform norm; ask Ruben)
+
+- Make everything norm proof
+
+- Fix ft_split.c
+
+- Remove author file. Moulinette will see this is a hidden file.
+
+- Norminette is enough. Norminette+ is overkill
+
+- ft_atoi.c het is niet erg als er geen long wordt gebruikt. Bij 1 van de libft testers gaf die gele output bij ft_split. Geen probleem dus.
+
