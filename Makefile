@@ -1,20 +1,4 @@
-NAME 		= libft.a
-CFLAGS 		= -Wall -Werror -Wextra
-
-DIR_SRC 	= ./srcs/
-DIR_BONUS	= ./bonus/
-DIR_OBJ		= ./obj/
-
-DIR_INC		= ./inc/
-HEADER		= ./inc/libft.h
-
-RED			= \033[0;31m
-GREEN		= \033[0;32m
-YELLOW		= \033[0;33m
-BLUE		= \033[0;34m
-WHITE		= \033[0;37m
-
-SRC = 	ft_atoi.c \
+SRCS = 	ft_atoi.c \
 		ft_bzero.c \
 		ft_calloc.c \
 		ft_isalnum.c \
@@ -59,38 +43,33 @@ BONUS =	ft_lstadd_back.c \
 		ft_lstnew.c \
 		ft_lstsize.c
 
-SRCS_wpath	= $(addprefix $(DIR_SRC), $(SRC))
-BONUS_O 	= $(BONUS_wpath:.c=.o)
-BONUS_wpath = $(addprefix $(DIR_BONUS), $(BONUS))
-SRCS_O		= $(SRCS_wpath:.c=.o)
+OBJS			= $(SRCS:.c=.o)
 
-ifdef WITH_BONUS
-	OBJ = $(SRCS_O) $(BONUS_O)
-else
-	OBJ = $(SRCS_O)
-endif
+BONUS_OBJS		= $(BONUS:.c=.o)
 
-all: $(NAME)
+EXTRA_OBJS		= $(EXTRA:.c=.o)
 
-$(NAME): $(OBJ)
-	@ar rcs $@ $^
-	@echo "\n$(YELLOW)Constructed static library\n$(WHITE)"
+CC				= gcc
+RM				= rm -f
+CFLAGS			= -Wall -Wextra -Werror -I .
 
-bonus:
-	@$(MAKE) --no-print-directory WITH_BONUS=1 all
+NAME			= libft.a
 
-%.o: %.c $(HEADER)
-	@echo "$(BLUE)Compiling $(GREEN)$<"
-	@$(CC) -c -I $(DIR_INC) $(CFLAGS) $< -o $@
+all:			$(NAME)
+
+$(NAME):		$(OBJS) $(EXTRA_OBJS)
+				ar rcs $(NAME) $(OBJS) $(EXTRA_OBJS)
 
 clean:
-	@echo "\n$(RED)Removing all object files"
-	@rm -f $(SRCS_O) $(BONUS_O)
+				$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
 
-fclean: clean
-	@echo "$(RED)Removing static library $(NAME)\n"
-	@rm -f $(NAME)
+fclean:			clean
+				$(RM) $(NAME)
+				$(RM) a.out
 
-re: fclean all
+re:				fclean $(NAME)
 
-.PHONY: all bonus clean fclean
+bonus:			$(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
+				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
+
+.PHONY:			all clean fclean re bonus
