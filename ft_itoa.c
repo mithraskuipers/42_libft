@@ -6,7 +6,7 @@
 /*   By: mkuipers <mkuipers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/14 15:19:59 by mkuipers      #+#    #+#                 */
-/*   Updated: 2021/10/28 12:17:25 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/28 15:49:24 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,10 @@ char	*ft_itoa(int n)
 
 	n_long = (long)n;
 	ndigits = ft_ndigits(n_long);
-	n_str = (char *)malloc(sizeof(char) * (ndigits + 1));
-	if (!n_str)
+	n_str = malloc(sizeof(char) * (ndigits + 1));
+	if (!(n_str))
 		return (NULL);
-	n_str = ft_strfiller(n_str, ndigits, n_long);
-	return (n_str);
+	return (ft_strfiller(n_str, ndigits, n_long));
 }
 
 /*

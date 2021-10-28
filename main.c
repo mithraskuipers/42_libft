@@ -1,10 +1,21 @@
 # include "ft_split.c"
 
-int main(void)
+void kaas(void *test)
 {
-    char    s[] = "Austin zit naast mij en is heel erg hard aan het werk";
-    ft_split(s, ' ');
+    ft_putstr_fd("- ", 1);
+    ft_putendl_fd((char*)test, 1);
+}
 
-    system("leaks a.out");
-    return (0);
+int main (void)
+{
+	t_list *head = ft_lstnew("gert");
+
+	ft_lstadd_back(&head, ft_lstnew("rowan"));
+	ft_lstadd_back(&head, ft_lstnew("aids"));
+	ft_lstadd_back(&head, ft_lstnew("tering"));
+	ft_lstadd_back(&head, ft_lstnew("hoer"));
+
+
+    ft_lstiter(head, &kaas);
+	return (0);
 }

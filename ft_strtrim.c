@@ -6,7 +6,7 @@
 /*   By: mkuipers <mkuipers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/10 12:05:03 by mkuipers      #+#    #+#                 */
-/*   Updated: 2021/10/28 12:26:00 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/28 14:50:56 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
-	char	*s2;
 
 	i = 0;
 	j = ft_strlen(s1);
@@ -42,8 +41,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(""));
 	while (ft_isinset(s1[j - 1], set))
 		j--;
-	s2 = ft_substr(s1, i, (j - i));
-	return (s2);
+	return (ft_substr(s1, i, (j - i)));
 }
 
 /*

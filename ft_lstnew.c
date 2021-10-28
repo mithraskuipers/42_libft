@@ -6,7 +6,7 @@
 /*   By: mkuipers <mkuipers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/17 17:14:42 by mkuipers      #+#    #+#                 */
-/*   Updated: 2021/10/27 23:12:16 by mkuipers      ########   odam.nl         */
+/*   Updated: 2021/10/28 15:56:28 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_elem;
 
-	new_elem = malloc(sizeof(t_list));
+	new_elem = malloc(sizeof(t_list) * 1);
 	if (!(new_elem))
 		return (NULL);
 	new_elem->content = content;

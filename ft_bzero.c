@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/06 11:51:14 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/27 18:33:18 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/28 14:40:10 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*s_uc;
-	size_t			i;
-
-	s_uc = (unsigned char *)s;
-	i = 0;
-	if (n == 0)
-		return ;
-	while (i < n)
-	{
-		s_uc[i] = '\0';
-		i++;
-	}
+	ft_memset(s, 0, n);
 }
 
 /*

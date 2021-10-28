@@ -49,7 +49,7 @@ BONUS_OBJS		= $(BONUS:.c=.o)
 
 EXTRA_OBJS		= $(EXTRA:.c=.o)
 
-CC				= gcc
+CC				= gcc -g
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror -I .
 
@@ -58,7 +58,7 @@ NAME			= libft.a
 all:			$(NAME)
 
 $(NAME):		$(OBJS) $(EXTRA_OBJS)
-				ar rcs $(NAME) $(OBJS) $(EXTRA_OBJS)
+				@ar rcs $(NAME) $(OBJS) $(EXTRA_OBJS)
 
 clean:
 				$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)

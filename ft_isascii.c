@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/05 18:45:22 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/26 17:16:32 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/28 14:56:09 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isascii(int c)
 {
-	if ((c >= 0) && (c <= 127))
-		return (1);
-	return (0);
+	return ((c >= 0) && (c <= 127));
 }

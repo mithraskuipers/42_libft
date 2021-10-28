@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/05 17:52:01 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/27 23:23:37 by mkuipers      ########   odam.nl         */
+/*   Updated: 2021/10/28 14:55:55 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isalpha(int c)
 {
-	if (((c >= 'A' && c <= 'Z')) || ((c >= 'a') && (c <= 'z')))
-		return (1);
-	return (0);
+	return (((c >= 'A' && c <= 'Z')) || ((c >= 'a') && (c <= 'z')));
 }

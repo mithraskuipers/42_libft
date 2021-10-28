@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/05 18:03:18 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/26 17:16:32 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/28 14:58:24 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	if (((c >= 'A' && c <= 'Z')) || ((c >= 'a') && (c <= 'z')) || ((c >= '0') \
-	&& (c <= '9')))
-		return (1);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

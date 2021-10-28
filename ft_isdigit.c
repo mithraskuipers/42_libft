@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/05 12:23:06 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/27 23:23:45 by mkuipers      ########   odam.nl         */
+/*   Updated: 2021/10/28 14:56:21 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int	ft_isdigit(int c)
 {
-	if ((c >= '0') && (c <= '9'))
-		return (1);
-	return (0);
+	return ((c >= '0') && (c <= '9'));
 }
