@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/09 14:53:34 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/27 23:39:04 by mkuipers      ########   odam.nl         */
+/*   Updated: 2021/10/29 08:49:17 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (&(s_uc[i]));
 		i++;
 	}
-	if ((s_uc[i] == c_uc) && (i < n))
-		return (&(s_uc[i]));
 	return (NULL);
 }

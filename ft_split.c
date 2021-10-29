@@ -6,7 +6,7 @@
 /*   By: mkuipers <mkuipers@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/13 20:11:24 by mkuipers      #+#    #+#                 */
-/*   Updated: 2021/10/28 14:31:01 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/29 08:07:37 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	ft_countparts(const char *s, char c)
 	}
 	return (nparts);
 }
-///*
+
 static char	**dp_clean(char **dp, size_t dp_i)
 {
 	while (dp_i > 0)
@@ -43,7 +43,7 @@ static char	**dp_clean(char **dp, size_t dp_i)
 	free(dp);
 	return (NULL);
 }
-//*/
+
 static char	**ft_split_helper(char **dp, const char *s, char c)
 {
 	size_t	s_i;
@@ -61,7 +61,7 @@ static char	**ft_split_helper(char **dp, const char *s, char c)
 				s_i++;
 			dp[dp_i] = ft_substr(s, wordstart, (s_i - wordstart));
 			if (!dp[dp_i])
-				return(dp_clean(dp, dp_i));
+				return (dp_clean(dp, dp_i));
 			dp_i++;
 		}
 		s_i++;

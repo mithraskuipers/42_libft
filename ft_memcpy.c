@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/06 14:38:25 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/27 18:35:51 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/29 08:19:41 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	dst_uc = (unsigned char *)dst;
 	src_uc = (unsigned char *)src;
 	i = 0;
+	if ((dst == NULL) && (src == NULL))
+		return (NULL);
 	while (i < n)
 	{
 		dst_uc[i] = src_uc[i];

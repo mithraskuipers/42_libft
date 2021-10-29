@@ -1,3 +1,6 @@
+
+NAME = libft.a
+
 SRCS = 	ft_atoi.c \
 		ft_bzero.c \
 		ft_calloc.c \
@@ -33,7 +36,10 @@ SRCS = 	ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c
 
-BONUS =	ft_lstadd_back.c \
+OFILES = $(SRCS:.c=.o)
+
+BONUS_SRC = $(SRCS) \
+		ft_lstadd_back.c \
 		ft_lstadd_front.c \
 		ft_lstclear.c \
 		ft_lstdelone.c \
@@ -43,33 +49,32 @@ BONUS =	ft_lstadd_back.c \
 		ft_lstnew.c \
 		ft_lstsize.c
 
-OBJS			= $(SRCS:.c=.o)
+BONUS_OFILES = $(OFILES) $(BONUS_SRC:.c=.o)
 
-BONUS_OBJS		= $(BONUS:.c=.o)
+INCLUDES = libft.h
 
-EXTRA_OBJS		= $(EXTRA:.c=.o)
+all: $(NAME)
 
-CC				= gcc -g
-RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I .
+$(NAME): $(OFILES) $(INCLUDES)
+	@ar rcs $(NAME) $?
+	@echo "\033[92mCompiling library\033[0m"
 
-NAME			= libft.a
+bonus: $(NAME) $(BONUS_OFILES) $(BONUS_SRC)
+	@touch bonus
+	@ar rcs $(NAME) $?
+	@/bin/rm -f bonus
 
-all:			$(NAME)
-
-$(NAME):		$(OBJS) $(EXTRA_OBJS)
-				@ar rcs $(NAME) $(OBJS) $(EXTRA_OBJS)
+%.o: %.c
+	$(CC) -Wall -Wextra -Werror -c $<
 
 clean:
-				$(RM) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
+	@/bin/rm -f $(BONUS_OFILES)
+	@/bin/rm -f a.out
+	@/bin/rm -f bonus
+	@echo "\033[92mRemoved All Object Files.\033[0m"
 
-fclean:			clean
-				$(RM) $(NAME)
-				$(RM) a.out
+fclean:	clean
+	@/bin/rm -f $(NAME)
+	@echo "\033[92mRemoved .a file and all .o files.\033[0m"
 
-re:				fclean $(NAME)
-
-bonus:			$(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
-				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS) $(EXTRA_OBJS)
-
-.PHONY:			all clean fclean re bonus
+re: fclean all

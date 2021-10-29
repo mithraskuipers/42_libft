@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/09 19:42:41 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/27 19:28:26 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/29 10:10:11 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int		s1_len;
 	size_t	i;
 	char	*dup;
 
-	s1_len = ft_strlen(s1);
 	i = 0;
-	dup = malloc((s1_len + 1) * sizeof(char));
+	dup = malloc((ft_strlen(s1) + 1) * sizeof(char));
+	if (!(dup))
+		return (NULL);
 	while (s1[i])
 	{
 		dup[i] = s1[i];
@@ -29,6 +29,8 @@ char	*ft_strdup(const char *s1)
 	dup[i] = '\0';
 	return (dup);
 }
+
+// CALLOC ()
 
 /*
 ft_strdup(1) uses ft_strlen(1) to sufficient memory such that it can store the

@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/09 17:13:29 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/28 12:11:29 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/29 12:35:26 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,35 @@
 
 int	ft_iswhitespace(int c)
 {
-	if (c == ' ' || c == '\t' || c == '\v' || c == '\r' || c == '\n' || \
-	c == '\f')
+	if ((c == ' ') || (c == '\t') || (c == '\v') || (c == '\r') || (c == '\n') \
+	|| (c == '\f'))
 		return (1);
 	return (0);
 }
 
 int	ft_atoi(const char *str)
 {
-	size_t	i;
-	int		sign;
-	int		nbr;
+	int	value;
+	int	i;
+	int	sign;
 
 	i = 0;
-	sign = 1;
-	nbr = 0;
-	if (!(str))
-		return (0);
 	while (ft_iswhitespace(str[i]))
 		i++;
+	value = 0;
+	sign = 1;
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			sign = -1;
 		i++;
 	}
-	while (ft_isdigit(str[i]))
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		nbr = ((nbr * 10) + str[i] - '0');
+		value = (value * 10) + (str[i] - '0');
 		i++;
 	}
-	return (nbr * sign);
+	return (value * sign);
 }
 
 /*

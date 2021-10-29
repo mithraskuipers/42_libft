@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/10/16 15:15:18 by mikuiper      #+#    #+#                 */
-/*   Updated: 2021/10/28 12:26:40 by mikuiper      ########   odam.nl         */
+/*   Updated: 2021/10/29 12:29:10 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*s_new;
 
+	if (!(s) || (!(f)))
+		return (NULL);
 	s_new = ft_strdup(s);
+	if (!(s_new))
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{
