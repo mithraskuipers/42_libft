@@ -72,7 +72,7 @@ Linked list data structure functions (bonus)
 -  [x]  [`ft_lstiter`](ft_lstiter_bonus.c)
 -  [x]  [`ft_lstmap`](ft_lstmap_bonus.c)
 
-## Third-party testers
+# Third-party testers
 
 [libftTester](https://github.com/Tripouille/libftTester). 
 [libft-unit-test](https://github.com/alelievr/libft-unit-test)
