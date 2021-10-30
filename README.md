@@ -61,15 +61,15 @@ C programming can be very time time-consuming without access to standard C libra
 ## Bonus functions
 Linked list data structure functions (bonus)
 
--  [x]  [`ft_lstnew`](ft_lstnew.c)
--  [x]  [`ft_lstadd_front`](ft_lstadd_front.c)
--  [x]  [`ft_lstsize`](ft_lstsize.c)
--  [x]  [`ft_lstlast`](ft_lstlast.c)
--  [x]  [`ft_lstadd_back`](ft_lstadd_back.c)
--  [x]  [`ft_lstdelone`](ft_lstdelone.c)
--  [x]  [`ft_lstclear`](ft_lstclear.c)
--  [x]  [`ft_lstiter`](ft_lstiter.c)
--  [x]  [`ft_lstmap`](ft_lstmap.c)
+-  [x]  [`ft_lstnew`](ft_lstnew_bonus_bonus.c)
+-  [x]  [`ft_lstadd_front`](ft_lstadd_front_bonus.c)
+-  [x]  [`ft_lstsize`](ft_lstsize_bonus.c)
+-  [x]  [`ft_lstlast`](ft_lstlast_bonus.c)
+-  [x]  [`ft_lstadd_back`](ft_lstadd_back_bonus.c)
+-  [x]  [`ft_lstdelone`](ft_lstdelone_bonus.c)
+-  [x]  [`ft_lstclear`](ft_lstclear_bonus.c)
+-  [x]  [`ft_lstiter`](ft_lstiter_bonus.c)
+-  [x]  [`ft_lstmap`](ft_lstmap_bonus.c)
 
 ---  
 
