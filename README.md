@@ -1,5 +1,5 @@
-<p  align="center">
-<img  width=""  height=""  src="https://raw.githubusercontent.com/mithraskuipers/mithraskuipers/master/readme_42/logo.png">
+<p align="center">
+<img width="" height="" src="https://raw.githubusercontent.com/mithraskuipers/mithraskuipers/master/readme_42/logo.png">
 </p>
 
 # Index
