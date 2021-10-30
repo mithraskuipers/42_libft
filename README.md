@@ -1,5 +1,5 @@
 <p align="center">
-<img width="" height="" src="https://raw.githubusercontent.com/mithraskuipers/mithraskuipers/master/readme_42/logo.png">
+<img width="" height="" src="https://github.com/mithraskuipers/mithraskuipers/blob/master/readme_srcs/42/logo.png?raw=true">
 </p>
 
 # Index
@@ -10,7 +10,7 @@
 * * [Non-standard functions](#Non-standard-functions)
 * * [Bonus functions](#Bonus-functions)
 *  [Technologies](#Technologies)
-*  [Third-party testers](#Third-party testers)
+*  [Third-party testers](#Third-party-testers)
 *  [How to Run](#How-to-Run)
 
 # What is Libft
