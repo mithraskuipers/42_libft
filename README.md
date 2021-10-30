@@ -10,6 +10,7 @@
 * * [Non-standard functions](#Non-standard-functions)
 * * [Bonus functions](#Bonus-functions)
 *  [Technologies](#Technologies)
+*  [Third-party testers](#Third-party testers)
 *  [How to Run](#How-to-Run)
 
 # What is Libft
@@ -71,7 +72,11 @@ Linked list data structure functions (bonus)
 -  [x]  [`ft_lstiter`](ft_lstiter_bonus.c)
 -  [x]  [`ft_lstmap`](ft_lstmap_bonus.c)
 
----  
+## Third-party testers
+
+[libftTester](https://github.com/Tripouille/libftTester)
+[libft-unit-test]()
+[libft-war-machine]()
 
 # Technologies
 
