@@ -74,9 +74,9 @@ Linked list data structure functions (bonus)
 
 # Third-party testers
 
-[libftTester](https://github.com/Tripouille/libftTester). 
-[libft-unit-test](https://github.com/alelievr/libft-unit-test)
-[libft-war-machine](https://github.com/ska42/libft-war-machine)
+[libftTester](https://github.com/Tripouille/libftTester)  
+[libft-unit-test](https://github.com/alelievr/libft-unit-test)  
+[libft-war-machine](https://github.com/ska42/libft-war-machine)  
 
 # Technologies
 
