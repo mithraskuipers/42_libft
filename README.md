@@ -2,6 +2,8 @@
 <img width="" height="" src="https://github.com/mithraskuipers/mithraskuipers/blob/master/readme_srcs/42/logo.png?raw=true">
 </p>
 
+Status: [![mikuiper's 42 Libft Score](https://badge42.vercel.app/api/v2/cl483ajsd008309l6suq9l256/project/2365506)](https://github.com/mithraskuipers)
+
 # Index
 
 *  [What is Libft](#What-is-Libft)
