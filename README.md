@@ -94,7 +94,3 @@ Various technologies were used during the making of this project:
 * [Makefile](https://en.wikipedia.org/wiki/Makefile)
 * [Shell](https://en.wikipedia.org/wiki/Unix_shell)
 * [gcc](https://gcc.gnu.org/)
-
-# How to Run
-
-WIP
